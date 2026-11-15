@@ -1,0 +1,20 @@
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [
+  "E", "W", "F",  # pycodestyle + pyflakes: basic errors, unused imports/vars
+  "I",            # import sorting
+  "UP",           # pyupgrade: legacy syntax, e.g. typing.Iterable
+  "B",            # bugbear: likely bugs (mutable defaults, etc.)
+  "SIM",          # simplifications
+  "C4",           # better comprehensions
+  "N",            # naming conventions
+  "PT",           # pytest style
+  "DTZ",          # naive datetimes, very relevant for this task
+  "RUF",          # ruff's own rules
+]
+
+[tool.mypy]
+strict = true
